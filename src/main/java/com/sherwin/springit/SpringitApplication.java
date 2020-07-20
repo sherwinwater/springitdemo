@@ -11,11 +11,13 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.util.Arrays;
 
 @SpringBootApplication
 @EnableConfigurationProperties(SpringitProperties.class)
+@EnableJpaAuditing
 public class SpringitApplication {
 
     private static final Logger log = LoggerFactory.getLogger(SpringitApplication.class);
