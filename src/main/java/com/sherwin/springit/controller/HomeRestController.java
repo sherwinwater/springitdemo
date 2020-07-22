@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeRestController {
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(){
         return "home,spring-while";
     }

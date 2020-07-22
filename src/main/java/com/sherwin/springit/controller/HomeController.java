@@ -13,7 +13,7 @@ public class HomeController {
     public String home(Model model, HttpServletRequest request){
         model.addAttribute("msg","douluo dalu");
         System.out.println(request.getRequestedSessionId());
-        return "index";
+        return "layouts/new_page";
     }
 
 }
