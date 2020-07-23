@@ -26,7 +26,7 @@ import java.util.List;
 
 @SpringBootApplication
 @EnableConfigurationProperties(SpringitProperties.class)
-@EnableJpaAuditing
+//@EnableJpaAuditing
 public class SpringitApplication {
 
     private static final Logger log = LoggerFactory.getLogger(SpringitApplication.class);
