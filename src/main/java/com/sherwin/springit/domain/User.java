@@ -35,6 +35,11 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private boolean enabled;
 
+//    @OneToMany(mappedBy = "user")
+//    private List<Link> links = new ArrayList<>();
+//
+//    private boolean isVoteUp;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",

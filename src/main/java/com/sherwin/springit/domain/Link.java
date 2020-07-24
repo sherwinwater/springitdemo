@@ -5,13 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.validator.constraints.URL;
 import org.ocpsoft.prettytime.PrettyTime;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDateTime;
@@ -36,12 +36,21 @@ public class Link extends Auditable{
 
     @NonNull
     @NotEmpty(message = "please enter a url")
-//    @URL(message = "please enter a valid url")
+    @URL(message = "please enter a valid url")
     private String url;
 
     // comments
     @OneToMany(mappedBy = "link")
     private List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "link")
+    private List<Vote> votes = new ArrayList<>();
+
+    @Min(value = 0)
+    private int voteCount = 0;
+
+//    @ManyToOne
+//    private User user;
 
     public void addComment(Comment comment){
         comments.add(comment);
