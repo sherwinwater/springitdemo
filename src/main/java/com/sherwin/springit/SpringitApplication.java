@@ -20,6 +20,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,6 +29,7 @@ import java.util.List;
 @SpringBootApplication
 @EnableConfigurationProperties(SpringitProperties.class)
 @EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableTransactionManagement
 //@EnableJpaAuditing
 public class SpringitApplication {
 
