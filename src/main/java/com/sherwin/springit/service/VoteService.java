@@ -12,6 +12,10 @@ public class VoteService {
     private final Logger logger = LoggerFactory.getLogger(UserService.class);
     private VoteRepository voteRepository;
 
+    public VoteService(VoteRepository voteRepository) {
+        this.voteRepository = voteRepository;
+    }
+
     public void save(Vote vote){
         voteRepository.save(vote);
     }
