@@ -16,7 +16,7 @@ import java.util.List;
 public class Vote extends Auditable{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NonNull
