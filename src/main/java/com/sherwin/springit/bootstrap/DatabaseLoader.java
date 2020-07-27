@@ -97,8 +97,7 @@ public class DatabaseLoader implements CommandLineRunner {
         userRepository.save(user);
         users.put("user@gmail.com", user);
 
-        User admin = new User("admin@gmail.com", secret, true, "Joe", "Admin", "masteradmin");
-        admin.setAlias("joeadmin");
+        User admin = new User("admin@gmail.com", secret, true, "Joe", "Admin", "joeadmin");
         admin.setConfirmPassword(secret);
         admin.addRole(adminRole);
         userRepository.save(admin);

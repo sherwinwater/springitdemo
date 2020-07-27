@@ -34,7 +34,6 @@ public class VoteController {
             Link link = optionalLink.get();
             Vote vote = new Vote(direction,link);
             voteService.save(vote);
-
             int updatedVoteCount = (voteCount + direction) < 0 ? 0:(voteCount + direction) ;
             link.setVoteCount(updatedVoteCount);
             linkService.save(link);

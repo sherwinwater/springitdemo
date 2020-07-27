@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Entity
-@Data
+@Setter @Getter
 @NoArgsConstructor
 @RequiredArgsConstructor
 @PasswordsMatch
