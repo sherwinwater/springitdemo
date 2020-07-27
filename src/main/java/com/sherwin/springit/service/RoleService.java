@@ -1,5 +1,6 @@
 package com.sherwin.springit.service;
 
+import com.sherwin.springit.domain.Role;
 import com.sherwin.springit.domain.User;
 import com.sherwin.springit.repository.RoleRepository;
 import com.sherwin.springit.repository.UserRepository;
@@ -15,6 +16,9 @@ public class RoleService {
         this.roleRepository = roleRepository;
     }
 
+    public Role findByName(String name){
+        return roleRepository.findByName(name);
+    }
 }
 
 
