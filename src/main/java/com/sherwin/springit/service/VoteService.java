@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class VoteService {
 
-    private final Logger logger = LoggerFactory.getLogger(UserService.class);
+    private final Logger logger = LoggerFactory.getLogger(VoteService.class);
     private VoteRepository voteRepository;
+
+    public VoteService(VoteRepository voteRepository) {
+        this.voteRepository = voteRepository;
+    }
 
     public void save(Vote vote){
         voteRepository.save(vote);
