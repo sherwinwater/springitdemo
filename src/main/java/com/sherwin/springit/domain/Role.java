@@ -14,7 +14,6 @@ import java.util.Collection;
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-@Table(name = "role")
 public class Role {
 
     @Id

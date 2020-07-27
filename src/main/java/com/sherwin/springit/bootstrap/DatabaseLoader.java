@@ -27,11 +27,6 @@ public class DatabaseLoader implements CommandLineRunner {
     private RoleRepository roleRepository;
     private UserRepository userRepository;
 
-//    public DatabaseLoader(LinkRepository linkRepository, CommentRepository commentRepository) {
-//        this.linkRepository = linkRepository;
-//        this.commentRepository = commentRepository;
-//    }
-
     @Override
     public void run(String... args) {
 
@@ -93,6 +88,5 @@ public class DatabaseLoader implements CommandLineRunner {
         userRepository.save(master);
 
     }
-
 
 }
